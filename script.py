@@ -36,7 +36,7 @@ class CryptoConverterBot:
             raise APIException(f"Неправилно задано количество целевой валюты! {amount}")
 
         r = requests.get(API_url)
-        result = json.loads(r.content)['rates'][keys[quote]] * amount
+        result = json.loads(r.content)[keys[quote]] * amount
         return result
 
 bot = telebot.TeleBot(TOKEN)
