@@ -1,6 +1,4 @@
 import telebot
-#from config import TOKEN, keys, APIException, CryptoConverterBot
-
 import requests
 import json
 
