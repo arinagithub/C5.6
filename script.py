@@ -34,7 +34,7 @@ class CryptoConverterBot:
         except ValueError:
             raise APIException(f"Неправилно задано количество целевой валюты! {amount}")
 
-        r = requests.get(f'https://api.exchangeratesapi.io/latest?symbols={quote_ticker}&base={base_ticker}')
+        r = requests.get(f'http://min-api.cryptocompare.com/data/price?fsym={quote_ticker}&tsyms={base_ticker}')
         result = json.loads(r.content)['rates'][keys[quote]] * amount
         return result
 
