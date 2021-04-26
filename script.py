@@ -3,6 +3,7 @@ import requests
 import json
 
 TOKEN = '1737742191:AAECLC161dJhI4iqyrq9WsMGp8F-zcAyBZw'
+API_url = "https://www.cbr-xml-daily.ru/daily_json.js"
 
 keys = {
     "доллар": "USD",
@@ -34,7 +35,7 @@ class CryptoConverterBot:
         except ValueError:
             raise APIException(f"Неправилно задано количество целевой валюты! {amount}")
 
-        r = requests.get(f'https://api.exchangeratesapi.io/latest?symbols={quote_ticker}&base={base_ticker}')
+        r = requests.get(API_url)
         result = json.loads(r.content)['rates'][keys[quote]] * amount
         return result
 
