@@ -2,7 +2,7 @@ import telebot
 import requests
 import json
 
-TOKEN = '1737742191:AAECLC161dJhI4iqyrq9WsMGp8F-zcAyBZw'
+TOKEN = '1775578491:AAEkx2shctJwE47vKKdiax8XbVAWs8GGf2s'
 API_url = "https://www.cbr-xml-daily.ru/daily_json.js"
 
 keys = {
